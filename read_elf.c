@@ -38,6 +38,20 @@ int parser_elf_header(Elf32_Ehdr *elf32_ehdr)
  	printf("\n");
 	printf("Obj :%d\n", elf32_ehdr->e_ident[4] == 1? 32:64);
 	printf("Data:%s\n", elf32_ehdr->e_ident[5] == 1? "LSB":"MSB");
+	printf("type:%d\nmachine:%d\nversion:%d\nentry:%p\nphoff:%u\nshoff:%u\nflags:%d\nehsize:%d\nphentsize:%d\nphnum:%d\nshentsize:%d\nshnum:%d\nshstrndx:%d\n",
+			elf32_ehdr->e_type,
+			elf32_ehdr->e_machine,
+			elf32_ehdr->e_version,
+			elf32_ehdr->e_entry,
+			elf32_ehdr->e_phoff,
+			elf32_ehdr->e_shoff,
+			elf32_ehdr->e_flags,
+			elf32_ehdr->e_ehsize,
+			elf32_ehdr->e_phentsize,
+			elf32_ehdr->e_phnum,
+			elf32_ehdr->e_shentsize,
+			elf32_ehdr->e_shnum,
+			elf32_ehdr->e_shstrndx);
 	return 0;
 	
 }

@@ -2,7 +2,7 @@
 #define DATA_STRUCT_H
 typedef unsigned char* Elf32_Addr;
 typedef unsigned short Elf32_Half;
-typedef unsigned long  Elf32_Off;
+typedef unsigned int   Elf32_Off;
 typedef signed int     Elf32_SWord;
 typedef unsigned int   Elf32_Word;
 
@@ -21,7 +21,7 @@ typedef struct{
 	Elf32_Half	  e_phnum;
 	Elf32_Half	  e_shentsize;
 	Elf32_Half	  e_shnum;
-	Elf32_Half	  e_shstrndex;
+	Elf32_Half	  e_shstrndx;
 }Elf32_Ehdr; 
 
 
